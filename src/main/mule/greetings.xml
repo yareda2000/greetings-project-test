@@ -9,7 +9,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="greetingsFlow" doc:id="6d05c537-9380-4afd-80d4-154b5aaf8a9c" >
 		<http:listener doc:name="Listener" doc:id="2e29f2b5-c4a7-41cf-8e5d-5a4a7b9672ca" config-ref="HTTP_Listener_config" path="selam-test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="fb3dbc81-2b5e-4a65-a070-2d30f758e6b2" message="I am start log"/>
 		<set-payload value="selam" doc:name="Set Payload" doc:id="3c4596be-e66a-4c6a-83ff-1a83f50d41c8" />
-		<logger level="INFO" doc:name="End-Logger" doc:id="67746358-fd92-4474-9ba8-aaf717999fae" message="#[payload]"/>
+		<logger level="INFO" doc:name="End-Log" doc:id="67746358-fd92-4474-9ba8-aaf717999fae" message="#[payload]"/>
 	</flow>
 </mule>
